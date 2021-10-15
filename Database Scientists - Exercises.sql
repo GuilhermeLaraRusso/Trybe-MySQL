@@ -1,0 +1,17 @@
+SELECT 'This is SQL Excercise, Practice and Solution';
+SELECT 1, 2, 3;
+SELECT 10 + 15 AS SOMA;
+SELECT 5 * 3 * 10 / 2;
+SELECT * FROM Scientists;
+SELECT * FROM Scientists.Projects;
+SELECT Name, Hours FROM Scientists.Projects;
+SELECT Name FROM Scientists ORDER BY Name ASC;
+SELECT Name FROM Scientists.Projects ORDER BY Name DESC;
+SELECT CONCAT('O projeto ', Name, ' precisou de ', Hours, ' horas para ser concluído.') FROM Scientists.Projects;
+SELECT Name, Hours FROM Scientists.Projects ORDER BY Hours DESC LIMIT 3;
+SELECT * FROM Scientists.AssignedTo;
+SELECT DISTINCT Project FROM Scientists.AssignedTo;
+SELECT Name FROM Scientists.Projects ORDER BY Hours DESC LIMIT 1;
+SELECT Name FROM Scientists.Projects ORDER BY Hours DESC LIMIT 1 OFFSET 1;
+SELECT * FROM Scientists.Projects ORDER BY Hours ASC LIMIT 5;
+SELECT CONCAT('Existem ', COUNT(Name), ' cientistas na tabela Scientists') AS 'Número de Cientistas' FROM Scientists.Scientists;
